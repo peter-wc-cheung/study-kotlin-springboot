@@ -6,4 +6,8 @@ import org.springframework.stereotype.Repository
 
 @Repository
 interface CourseRepository: CrudRepository<Course, Int> {
+
+    fun findByNameContaining(courseName: String): List<Course>
+
+
 }
